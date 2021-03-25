@@ -32,12 +32,13 @@ set_property -dict { PACKAGE_PIN M18   IOSTANDARD LVCMOS33 } [get_ports { BTN0 }
         data <= data_sq;
     else 
         data <= data_tri;
-    end if; ```
+    end if; 
+```
     
 The siren will remain triangular until the button is pressed.
 
 * To change the wailing speed, add these switches to the .xdc file:
-``sh 
+```sh 
 set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { SW0 }]; #IO_L24N_T3_RS0_15 Sch=sw[0]
 set_property -dict { PACKAGE_PIN L16   IOSTANDARD LVCMOS33 } [get_ports { SW1 }]; #IO_L3N_T0_DQS_EMCCLK_14 Sch=sw[1]
 set_property -dict { PACKAGE_PIN M13   IOSTANDARD LVCMOS33 } [get_ports { SW2 }]; #IO_L6N_T0_D08_VREF_14 Sch=sw[2]
@@ -45,10 +46,13 @@ set_property -dict { PACKAGE_PIN R15   IOSTANDARD LVCMOS33 } [get_ports { SW3 }]
 set_property -dict { PACKAGE_PIN R17   IOSTANDARD LVCMOS33 } [get_ports { SW4 }]; #IO_L12N_T1_MRCC_14 Sch=sw[4]
 set_property -dict { PACKAGE_PIN T18   IOSTANDARD LVCMOS33 } [get_ports { SW5 }]; #IO_L7N_T1_D10_14 Sch=sw[5]
 set_property -dict { PACKAGE_PIN U18   IOSTANDARD LVCMOS33 } [get_ports { SW6 }]; #IO_L17N_T2_A13_D29_14 Sch=sw[6]
-set_property -dict { PACKAGE_PIN R13   IOSTANDARD LVCMOS33 } [get_ports { SW7 }]; #IO_L5N_T0_D07_14 Sch=sw[7]
+set_property -dict { PACKAGE_PIN R13   IOSTANDARD LVCMOS33 } [get_ports { SW7 }]; #IO_L5N_T0_D07_14 Sch=sw[7] 
 ```
+
 * Add wailing speed to the siren.vhdl architecture:
-``` signal wail_speed: UNSIGNED (7 downto 0) := to_unsigned (8, 8); -- sets wailing speed  ```
+
+```signal wail_speed: UNSIGNED (7 downto 0) := to_unsigned (8, 8); -- sets wailing speed 
+```
 * And finish by modifying the wailing speed in siren.vhdl
 ```sh 
 wail_speed(0) <= SW0;
@@ -59,6 +63,6 @@ wail_speed(0) <= SW0;
  wail_speed(5) <= SW5;
  wail_speed(6) <= SW6;
  wail_speed(7) <= SW7;
- ```
+```
  
  
