@@ -19,5 +19,5 @@ Add all of the code from the DSD repo.
 	         "1011" WHEN dig = "10" and data(15 downto 8) /= X"00" ELSE -- digit 2
 	         "0111" WHEN dig = "11" and data(15 downto 12) /= X"0" ELSE -- digit 3
 	         "1111"; ```
-   ![20210325_125102](https://user-images.githubusercontent.com/32800667/112513608-e3a19780-8d6a-11eb-9d65-eca46de57bc0.jpg)
+![20210325_125102](https://user-images.githubusercontent.com/32800667/112513608-e3a19780-8d6a-11eb-9d65-eca46de57bc0.jpg)
 Display without leading zeros
