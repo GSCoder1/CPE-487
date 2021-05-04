@@ -5,7 +5,7 @@
 **Purpose:** To be able to use a mouse on a display using a VGA cable and Nexys-A7-100T FPGA Board
 
 **Important resources:** 
-..* Peter Ho's code: https://github.com/PeterHo8888/FPGA_Paint
+* Peter Ho's code: https://github.com/PeterHo8888/FPGA_Paint
 ..* XDC Master for most FPGA Boards: https://github.com/Digilent/digilent-xdc
 ..* PS/2 Protocol information: http://www.burtonsys.com/ps2_chapweske.htm
 
