@@ -19,5 +19,5 @@
 * nexys4ddr.xdc: constraint file. Main things needed to make mouse work are clock signal, vga connector, USB HID. 
 
 **Common Errors**
-*: "variable" is not declared: Check for typos as a variable does not match your declarations in port
-*: "Unspecified I/O standard: X out of Y logical ports use I/O standard...": your XDC file variables don't match your VHD files. 
+* "variable" is not declared: Check for typos as a variable does not match your declarations in port
+* "Unspecified I/O standard: X out of Y logical ports use I/O standard...": your XDC file variables don't match your VHD files. 
